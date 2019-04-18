@@ -628,6 +628,16 @@ nodeExporter:
     #   replacement: $1
     #   action: drop
 
+    ## Relablings for the Node Exporter ServiceMonitor. Uncomment if you want yo use hostname instead of IP 
+    ##
+    relabelings: []
+    # - replacement: $1$2
+    #   separator: ':'
+    #   sourceLabels:
+    #   - __meta_kubernetes_pod_node_name
+    #   - __meta_kubernetes_pod_container_port_number
+    #   targetLabel: instance
+
 ## Configuration for prometheus-node-exporter subchart
 ##
 prometheus-node-exporter:
